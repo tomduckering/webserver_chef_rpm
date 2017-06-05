@@ -1,11 +1,7 @@
-#This stops the build from trying to repackage all the jar files
-#that are part of wildlfy.
-%global __os_install_post %{nil}
-
 Name: role_webserver
 Summary: webserver chef thing
 Version: 0.0.1
-Release: 1
+Release: %{_release_number}
 License: GPL
 Group: Something/Blah
 Source: https://github.com/tomduckering/role_webserver/archive/master.tar.gz
