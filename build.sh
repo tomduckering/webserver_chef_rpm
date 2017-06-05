@@ -7,7 +7,7 @@ el_version=$1
 
 docker build --tag chef_docker_builder .
 
-if [ ${TRAVIS} == "true" ]
+if test "${TRAVIS}" == "true"
 then
 	BUILD_NUMBER=${TRAVIS_BUILD_NUMBER}
 else
