@@ -28,9 +28,13 @@ berks vendor vendor
 
 
 %install
+install -d $RPM_BUILD_ROOT/usr/local/bin
 install -d $RPM_BUILD_ROOT/var/chef/cookbooks
 cp -aR $RPM_BUILD_DIR/%{name}-master/vendor/* $RPM_BUILD_ROOT/var/chef/cookbooks
+echo "chef-solo --local-mode -o %{name}" > $RPM_BUILD_ROOT/usr/local/bin/run-chef
+chmod +x $RPM_BUILD_ROOT/usr/local/bin/run-chef
 
 %files
 /var/chef/cookbooks
+/usr/local/bin/run-chef
 
