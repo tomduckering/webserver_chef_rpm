@@ -16,4 +16,4 @@ before_install:
   
 script:
  # Run tests in Container
-- build.sh ${OS_VERSION}
+- ./build.sh ${OS_VERSION}
