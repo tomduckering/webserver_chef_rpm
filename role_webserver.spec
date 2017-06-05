@@ -28,10 +28,9 @@ berks vendor vendor
 
 
 %install
-install -d $RPM_BUILD_ROOT/opt/chef_roles/%{name}-%{version}
-cp -aR $RPM_BUILD_DIR/%{name}-master/vendor/* $RPM_BUILD_ROOT/opt/chef_roles/%{name}-%{version}
-#mv $RPM_BUILD_ROOT/opt/%{name}-%{version}.Final $RPM_BUILD_ROOT/opt/%{name}-%{version}
+install -d $RPM_BUILD_ROOT/var/chef/cookbooks
+cp -aR $RPM_BUILD_DIR/%{name}-master/vendor/* $RPM_BUILD_ROOT/var/chef/cookbooks
 
 %files
-/opt/chef_roles/%{name}-%{version}
+/var/chef/cookbooks
 
