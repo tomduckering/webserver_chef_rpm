@@ -24,4 +24,4 @@ deploy:
   provider: packagecloud
   repository: "scratch"
   username: "tomduckering"
-  dist: "centos7"
+  dist: "el/7"
