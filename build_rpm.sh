@@ -19,6 +19,6 @@ spectool -g -R SPECS/build.spec
 yum-builddep -y SPECS/build.spec
 
 #Install build the binary package
-rpmbuild -bb SPECS/build.spec --define "debug_package %{nil}" --define "_release_number $BUILD_NUMBER"
+rpmbuild --define "debug_package %{nil}" --define "_release_number $BUILD_NUMBER" -bb SPECS/build.spec
 
 cp -aR RPMS /spec_src
